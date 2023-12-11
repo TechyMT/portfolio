@@ -152,6 +152,10 @@ export const ProjectSectionHeading = ({ className, level = 3, as = 'h2', ...rest
   />
 );
 
+export const ProjectStack = ({ className, ...rest }) => (
+  <div className={classes(styles.stack, className)} {...rest} />
+);
+
 export const ProjectSectionText = ({ className, ...rest }) => (
   <Text className={classes(styles.sectionText, className)} size="l" as="p" {...rest} />
 );

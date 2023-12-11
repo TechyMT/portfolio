@@ -397,3 +397,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.stack{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+
+  
+}
+
+@media (max-width: 780px) {
+  .stack {
+    width: 100%;
+    transform: scale(0.8);
+    gap:30px;
+  }
+}

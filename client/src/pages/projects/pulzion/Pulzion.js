@@ -23,6 +23,7 @@ import
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
+  ProjectStack,
   ProjectTextRow,
 } from 'layouts/Project';
 import { Fragment } from 'react';
@@ -105,7 +106,8 @@ export const Pulzion = () =>
         <ProjectSection>
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack Used:</ProjectSectionHeading>
-            <ProjectSectionText>
+
+            <ProjectStack>
               <Icon icon={"nextjs"} />
               <Icon icon={"express"} />
               <Icon icon={"nodejs"} />
@@ -113,7 +115,8 @@ export const Pulzion = () =>
               <Icon icon={"docker"} />
               <Icon icon={"aws"} />
               <Icon icon={"azure"} />
-            </ProjectSectionText>
+            </ProjectStack>
+
           </ProjectTextRow>
         </ProjectSection>
       </ProjectContainer>

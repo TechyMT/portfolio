@@ -11,10 +11,11 @@ import
   ProjectHeader,
   ProjectImage,
   ProjectSection,
-  
+
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
+  ProjectStack,
   ProjectTextRow,
 } from 'layouts/Project';
 import { Fragment } from 'react';
@@ -73,7 +74,7 @@ export const ReceiptParser = () =>
         <ProjectSection>
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack Used:</ProjectSectionHeading>
-            <ProjectSectionText>
+            <ProjectStack>
               <Icon icon={"nestjs"} />
               <Icon icon={"prisma"} />
               <Icon icon={"nextjs"} />
@@ -82,7 +83,7 @@ export const ReceiptParser = () =>
               <Icon icon={"postgresql"} />
               <Icon icon={"tailwind"} />
               <Icon icon={"reactjs"} />
-            </ProjectSectionText>
+            </ProjectStack>
           </ProjectTextRow>
         </ProjectSection>
       </ProjectContainer>

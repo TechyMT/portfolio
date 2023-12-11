@@ -10,16 +10,18 @@ import { Footer } from 'components/Footer';
 // import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import { Icon } from 'components/Icon';
-import {
+import
+{
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
   ProjectImage,
   ProjectSection,
-  
+
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
+  ProjectStack,
   ProjectTextRow,
 } from 'layouts/Project';
 // import dynamic from 'next/dynamic';
@@ -32,7 +34,8 @@ const description =
   "The project focused on creating an impactful online presence by incorporating a visually stunning and fully responsive layout optimized for mobile screens. As a leader, I steered a proficient development team through the entire project lifecycle, ensuring successful completion. To enhance data management, we implemented the Atlas MongoDB cloud database, centralizing and streamlining storage for efficient operations. The project's success was evident in the live website, which consistently handled over 200+ requests per day, underscoring its significance and positive reception in the online space.";
 const roles = ['Backend Development', 'Frontend Development', 'UI/UX'];
 
-export function Blogs() {
+export function Blogs()
+{
   return (
     <Fragment>
       <Meta title={title} prefix="Projects" description={description} />
@@ -77,18 +80,18 @@ export function Blogs() {
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack Used:</ProjectSectionHeading>
             <ProjectSectionText>
-              <Icon icon={"nextjs"} />
-              <Icon icon={"express"} />
-              <Icon icon={"nodejs"} />
-              <Icon icon={"mongodb"} />
-              <Icon icon={"tailwind"} />
-              <Icon icon={"reactjs"} />
-             
-
+              <ProjectStack>
+                <Icon icon={"nextjs"} />
+                <Icon icon={"express"} />
+                <Icon icon={"nodejs"} />
+                <Icon icon={"mongodb"} />
+                <Icon icon={"tailwind"} />
+                <Icon icon={"reactjs"} />
+              </ProjectStack>
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
-      
+
       </ProjectContainer>
       <Footer />
     </Fragment>
