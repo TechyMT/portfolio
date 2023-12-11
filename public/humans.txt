@@ -1,0 +1,41 @@
+
+   __  ___
+  /  |/  /
+ / /|_/ / 
+/_/  /_/  
+          
+
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+DESIGNER | デザイナー
+
+Mustafa Trunkwala
+Hand crafted design & web development
+
+Design tools:
+Figma
+Photoshop
+Blender
+
+github.com/TechyMT
+linkedin.com/mustafa-trunkwala
+
+_______________________________________________________________________________
+
+TECHNOLOGY | テクノロジー
+
+React
+Next.js
+Three.js
+Framer Motion
+
+_______________________________________________________________________________
+
+FONTS | フォント
+
+Gotham
+Hiragino Kaku Gothic
