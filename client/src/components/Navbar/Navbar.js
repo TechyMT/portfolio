@@ -13,7 +13,8 @@ import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
 
-export const Navbar = () => {
+export const Navbar = () =>
+{
   const [current, setCurrent] = useState();
   const [target, setTarget] = useState();
   const { themeId } = useTheme();
@@ -24,20 +25,23 @@ export const Navbar = () => {
   const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     // Prevent ssr mismatch by storing this in state
     setCurrent(asPath);
   }, [asPath]);
 
   // Handle smooth scroll nav items
-  useEffect(() => {
+  useEffect(() =>
+  {
     if (!target || route !== '/') return;
     setCurrent(`${route}${target}`);
     scrollToHash(target, () => setTarget(null));
   }, [route, scrollToHash, target]);
 
   // Handle swapping the theme when intersecting with inverse themed elements
-  useEffect(() => {
+  useEffect(() =>
+  {
     const navItems = document.querySelectorAll('[data-navbar-item]');
     const inverseTheme = themeId === 'dark' ? 'light' : 'dark';
     const { innerHeight } = window;
@@ -45,17 +49,21 @@ export const Navbar = () => {
     let inverseMeasurements = [];
     let navItemMeasurements = [];
 
-    const isOverlap = (rect1, rect2, scrollY) => {
+    const isOverlap = (rect1, rect2, scrollY) =>
+    {
       return !(rect1.bottom - scrollY < rect2.top || rect1.top - scrollY > rect2.bottom);
     };
 
-    const resetNavTheme = () => {
-      for (const measurement of navItemMeasurements) {
+    const resetNavTheme = () =>
+    {
+      for (const measurement of navItemMeasurements)
+      {
         measurement.element.dataset.theme = '';
       }
     };
 
-    const handleInversion = () => {
+    const handleInversion = () =>
+    {
       const invertedElements = document.querySelectorAll(
         `[data-theme='${inverseTheme}'][data-invert]`
       );
@@ -72,18 +80,23 @@ export const Navbar = () => {
 
       resetNavTheme();
 
-      for (const inverseMeasurement of inverseMeasurements) {
+      for (const inverseMeasurement of inverseMeasurements)
+      {
         if (
           inverseMeasurement.top - scrollY > innerHeight ||
           inverseMeasurement.bottom - scrollY < 0
-        ) {
+        )
+        {
           continue;
         }
 
-        for (const measurement of navItemMeasurements) {
-          if (isOverlap(inverseMeasurement, measurement, scrollY)) {
+        for (const measurement of navItemMeasurements)
+        {
+          if (isOverlap(inverseMeasurement, measurement, scrollY))
+          {
             measurement.element.dataset.theme = inverseTheme;
-          } else {
+          } else
+          {
             measurement.element.dataset.theme = '';
           }
         }
@@ -91,8 +104,10 @@ export const Navbar = () => {
     };
 
     // Currently only the light theme has dark full-width elements
-    if (themeId === 'light') {
-      navItemMeasurements = Array.from(navItems).map(item => {
+    if (themeId === 'light')
+    {
+      navItemMeasurements = Array.from(navItems).map(item =>
+      {
         const rect = item.getBoundingClientRect();
 
         return {
@@ -106,17 +121,20 @@ export const Navbar = () => {
       handleInversion();
     }
 
-    return () => {
+    return () =>
+    {
       document.removeEventListener('scroll', handleInversion);
       resetNavTheme();
     };
   }, [themeId, windowSize, asPath]);
 
   // Check if a nav item should be active
-  const getCurrent = (url = '') => {
+  const getCurrent = (url = '') =>
+  {
     const nonTrailing = current?.endsWith('/') ? current?.slice(0, -1) : current;
 
-    if (url === nonTrailing) {
+    if (url === nonTrailing)
+    {
       return 'page';
     }
 
@@ -124,17 +142,20 @@ export const Navbar = () => {
   };
 
   // Store the current hash to scroll to
-  const handleNavItemClick = event => {
+  const handleNavItemClick = event =>
+  {
     const hash = event.currentTarget.href.split('#')[1];
     setTarget(null);
 
-    if (hash && route === '/') {
+    if (hash && route === '/')
+    {
       setTarget(`#${hash}`);
       event.preventDefault();
     }
   };
 
-  const handleMobileNavClick = event => {
+  const handleMobileNavClick = event =>
+  {
     handleNavItemClick(event);
     if (menuOpen) dispatch({ type: 'toggleMenu' });
   };
@@ -145,7 +166,7 @@ export const Navbar = () => {
         <a
           data-navbar-item
           className={styles.logo}
-          aria-label="Hamish Williams, Designer"
+          aria-label="Mustafa Trunkwala, Web Developer"
           onClick={handleMobileNavClick}
         >
           <Monogram highlight />

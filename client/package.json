@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio site for Mustafa Trunkwala",
   "repository": "https://github.com/TechyMT/portfolio.git",
-  "author": "Hamish Williams <mustafatrunkwala8@gmail.com>",
+  "author": "Mustafa Trunkwala <mustafatrunkwala8@gmail.com>",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@storybook/addon-a11y": "^6.5.10",
