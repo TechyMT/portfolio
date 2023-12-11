@@ -44,6 +44,7 @@ import Download from './svg/download.svg';
 // import Download from './svg/download.png'
 import Linkedin from './svg/linkedin.svg';
 import Instagram from './svg/instagram.svg';
+import Mail from './svg/mail.svg';
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -89,6 +90,7 @@ export const icons = {
   download: Download,
   linkedin: Linkedin,
   instagram: Instagram,
+  mail: Mail,
 };
 
 export const Icon = ({ icon, className, ...rest }) =>

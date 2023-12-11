@@ -14,6 +14,7 @@ import
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
+  ProjectStack,
   ProjectTextRow,
 } from 'layouts/Project';
 import { Fragment } from 'react';
@@ -43,7 +44,7 @@ export const Uses = () =>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
               <ProjectSectionHeading>Development</ProjectSectionHeading>
-              <ProjectSectionText>
+              <ProjectStack>
                 <div className={styles.stackGrid}>
                   <Icon icon={"cpp"} />
                   <div>C++</div>
@@ -130,7 +131,8 @@ export const Uses = () =>
                   <Icon icon={"azure"} />
                   <div>Azure</div>
                 </div>
-              </ProjectSectionText>
+              </ProjectStack>
+
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>

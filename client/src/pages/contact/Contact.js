@@ -14,8 +14,12 @@ import { useFormInput } from 'hooks';
 import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
+import { List } from 'components/List';
+import { Link } from 'components/Link';
+import { Table, TableBody, TableCell, TableRow } from 'components/Table';
 
-export const Contact = () => {
+export const Contact = () =>
+{
   const errorRef = useRef();
   const email = useFormInput('');
   const message = useFormInput('');
@@ -24,13 +28,15 @@ export const Contact = () => {
   const [statusError, setStatusError] = useState('');
   const initDelay = tokens.base.durationS;
 
-  const onSubmit = async event => {
+  const onSubmit = async event =>
+  {
     event.preventDefault();
     setStatusError('');
 
     if (sending) return;
 
-    try {
+    try
+    {
       setSending(true);
 
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
@@ -57,7 +63,8 @@ export const Contact = () => {
 
       setComplete(true);
       setSending(false);
-    } catch (error) {
+    } catch (error)
+    {
       setSending(false);
       setStatusError(error.message);
     }
@@ -71,7 +78,7 @@ export const Contact = () => {
       />
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
-          <form className={styles.form} method="post" onSubmit={onSubmit}>
+          <>
             <Heading
               className={styles.title}
               data-status={status}
@@ -86,28 +93,31 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
-            <Input
-              required
-              className={styles.input}
-              data-status={status}
-              style={getDelay(tokens.base.durationXS, initDelay)}
-              autoComplete="email"
-              label="Your Email"
-              type="email"
-              maxLength={512}
-              {...email}
-            />
-            <Input
-              required
-              multiline
-              className={styles.input}
-              data-status={status}
-              style={getDelay(tokens.base.durationS, initDelay)}
-              autoComplete="off"
-              label="Message"
-              maxLength={4096}
-              {...message}
-            />
+            
+
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>
+                      <div style={{ fontSize: "2rem" }}>
+                        Mail:
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <span style={{ fontSize: "2rem" }}><Link href={"mailto:mustafatrunkwala8@gmail.com"}>mustafatrunkwala8@gmail.com</Link></span>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <div style={{ fontSize: "2rem" }}>Phone:</div>
+                    </TableCell>
+                    <TableCell>
+                      <span style={{ fontSize: "2rem" }}><Link href={"tel:7755965855"}>+917755965855</Link></span>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div
@@ -126,20 +136,7 @@ export const Contact = () => {
                 </div>
               )}
             </Transition>
-            <Button
-              className={styles.button}
-              data-status={status}
-              data-sending={sending}
-              style={getDelay(tokens.base.durationM, initDelay)}
-              disabled={sending}
-              loading={sending}
-              loadingText="Sending..."
-              icon="send"
-              type="submit"
-            >
-              Send message
-            </Button>
-          </form>
+          </>
         )}
       </Transition>
       <Transition unmount in={complete}>
@@ -185,7 +182,8 @@ function getStatusError({
   status,
   errorMessage,
   fallback = 'There was a problem with your request',
-}) {
+})
+{
   if (status === 200) return false;
 
   const statuses = {
@@ -193,14 +191,16 @@ function getStatusError({
     404: 'There was a problem connecting to the server. Make sure you are connected to the internet',
   };
 
-  if (errorMessage) {
+  if (errorMessage)
+  {
     return errorMessage;
   }
 
   return statuses[status] || fallback;
 }
 
-function getDelay(delayMs, offset = numToMs(0), multiplier = 1) {
+function getDelay(delayMs, offset = numToMs(0), multiplier = 1)
+{
   const numDelay = msToNum(delayMs) * multiplier;
   return cssProps({ delay: numToMs((msToNum(offset) + numDelay).toFixed(0)) });
 }
