@@ -11,7 +11,7 @@ import
   ProjectHeader,
   ProjectImage,
   ProjectSection,
-  ProjectSectionColumns,
+  
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,

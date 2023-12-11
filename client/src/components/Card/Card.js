@@ -7,7 +7,7 @@ const Card = ({ title, description, src }) =>
     return (
         <div className={styles.card}>
             <div className={styles.cardImg}>
-                <Image src={src} placeholder={src} />
+                <Image src={src} placeholder={src} alt="card Image" />
 
             </div>
             {/* <Image className={styles.cardImg} src={printezMain} placeholder={printezMain} /> */}

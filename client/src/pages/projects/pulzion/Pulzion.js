@@ -9,12 +9,9 @@ import imageSprLessonBuilderLightPlaceholder from 'assets/pulzion.png';
 import pulzionMain from 'assets/pulzion.png';
 
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
-import { Link } from 'components/Link';
 import { Meta } from 'components/Meta';
-import { SegmentedControl, SegmentedControlOption } from 'components/SegmentedControl';
-import { ThemeProvider, useTheme } from 'components/ThemeProvider';
-import { useAppContext } from 'hooks';
+import { useTheme } from 'components/ThemeProvider';
+// import { useAppContext } from 'hooks';
 import { Icon } from 'components/Icon';
 import
 {
@@ -23,17 +20,13 @@ import
   ProjectHeader,
   ProjectImage,
   ProjectSection,
-  ProjectSectionColumns,
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
   ProjectTextRow,
 } from 'layouts/Project';
-import dynamic from 'next/dynamic';
-import { Fragment, useMemo } from 'react';
+import { Fragment } from 'react';
 import { media } from 'utils/style';
-import styles from './Pulzion.module.css';
-
 
 const title = 'Managing a heavy scale event.';
 const description =
@@ -48,15 +41,15 @@ const roles = [
 export const Pulzion = () =>
 {
   const { themeId } = useTheme();
-  const { dispatch } = useAppContext();
+  // const { dispatch } = useAppContext();
 
   const isDark = themeId === 'dark';
-  const themes = ['dark', 'light'];
+  // const themes = ['dark', 'light'];
 
-  const handleThemeChange = index =>
-  {
-    dispatch({ type: 'setTheme', value: themes[index] });
-  };
+  // const handleThemeChange = index =>
+  // {
+  //   dispatch({ type: 'setTheme', value: themes[index] });
+  // };
 
   return (
     <Fragment>

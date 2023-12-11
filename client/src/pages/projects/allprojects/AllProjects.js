@@ -3,7 +3,6 @@ import styles from './allProjects.module.css';
 import Card from 'components/Card/Card';
 import printezMain from '../../../assets/logo.png';
 import tataPowerMain from '../../../assets/tatapower.png';
-import bravalandMain from '../../../assets/bravaland.png';
 
 export const AllProjects = () =>
 {
@@ -21,5 +20,5 @@ export const AllProjects = () =>
             </div>
         </div>
     );
-}
+};
 
