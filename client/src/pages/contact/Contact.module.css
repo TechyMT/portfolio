@@ -28,7 +28,7 @@
 }
 
 .title {
-  margin-bottom: var(--space2XL);
+  margin-bottom: var(--spaceXS);
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationXL);
@@ -58,16 +58,23 @@
 }
 
 .divider {
-  margin-bottom: var(--space3XL);
+  margin-bottom: var(--space2XL);
+  margin-top: -14rem;
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationXL);
   transition-delay: var(--delay);
   opacity: 0;
+  width: 50%;
 
   @media (--mediaUseMotion) {
     transition-property: transform, opacity;
     transform: translate3d(0, var(--space5XL), 0);
+  }
+
+  @media (--mediaMobile) {
+    width: 100%;
+    margin-top:-24rem;
   }
 
   &[data-status='entering'],
@@ -93,6 +100,7 @@
       transform: translate3d(0, calc(var(--space2XL) * -1), 0);
     }
   }
+
 }
 
 .input {
@@ -300,4 +308,20 @@
   &:global {
     animation: fadeIn var(--durationL) ease var(--durationXL) forwards;
   }
+}
+
+.contactTable{
+  
+  border-collapse: collapse;
+  margin-top: -4rem;
+  margin-bottom: 8rem;
+  
+
+/* Add this style for smaller screens */
+@media (--mediaMobile) {
+    transform: scale(0.7);
+    margin-top: -10rem;
+    margin-bottom:12rem;
+
+}
 }

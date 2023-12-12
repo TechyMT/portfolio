@@ -20,7 +20,7 @@ import { Button } from 'components/Button';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Frontend Developer', 'Prototyper', 'Graphic Designer', 'Video Editor', ''];
+const disciplines = ['Backend Developer', 'Graphic Designer', 'Video Editor', 'Frontend Developer'];
 
 export const Home = () =>
 {
@@ -165,6 +165,7 @@ export const Home = () =>
         visible={visibleSections.includes(details.current)}
         id="details"
       />
+
       <Footer />
     </div>
   );

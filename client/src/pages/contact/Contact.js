@@ -93,31 +93,32 @@ export const Contact = () =>
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
-            
 
+            <div className={styles.contactTable}>
               <Table>
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <div style={{ fontSize: "2rem" }}>
+
+                      <div style={{ fontSize: "1.5rem" }}>
                         Mail:
                       </div>
                     </TableCell>
                     <TableCell>
-                      <span style={{ fontSize: "2rem" }}><Link href={"mailto:mustafatrunkwala8@gmail.com"}>mustafatrunkwala8@gmail.com</Link></span>
+                      <span style={{ fontSize: "1.5rem" }}><Link href={"mailto:mustafatrunkwala8@gmail.com"}>mustafatrunkwala8@gmail.com</Link></span>
                     </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <div style={{ fontSize: "2rem" }}>Phone:</div>
+                      <div style={{ fontSize: "1.5rem" }}>Phone:</div>
                     </TableCell>
                     <TableCell>
-                      <span style={{ fontSize: "2rem" }}><Link href={"tel:7755965855"}>+917755965855</Link></span>
+                      <span style={{ fontSize: "1.5rem" }}><Link href={"tel:+917755965855"}>+917755965855</Link></span>
                     </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
-            
+            </div>
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div
