@@ -20,7 +20,7 @@ import
 
   ProjectSectionContent,
   ProjectSectionHeading,
-  ProjectSectionText,
+  
   ProjectStack,
   ProjectTextRow,
 } from 'layouts/Project';
@@ -79,16 +79,16 @@ export function Blogs()
         <ProjectSection>
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack Used:</ProjectSectionHeading>
-            <ProjectSectionText>
-              <ProjectStack>
-                <Icon icon={"nextjs"} />
-                <Icon icon={"express"} />
-                <Icon icon={"nodejs"} />
-                <Icon icon={"mongodb"} />
-                <Icon icon={"tailwind"} />
-                <Icon icon={"reactjs"} />
-              </ProjectStack>
-            </ProjectSectionText>
+
+            <ProjectStack>
+              <Icon icon={"nextjs"} />
+              <Icon icon={"express"} />
+              <Icon icon={"nodejs"} />
+              <Icon icon={"mongodb"} />
+              <Icon icon={"tailwind"} />
+              <Icon icon={"reactjs"} />
+            </ProjectStack>
+
           </ProjectTextRow>
         </ProjectSection>
 
