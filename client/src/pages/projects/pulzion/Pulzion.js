@@ -29,7 +29,7 @@ import
 import { Fragment } from 'react';
 import { media } from 'utils/style';
 
-const title = 'Managing a heavy scale event.';
+const title = 'Pulzion EMS';
 const description =
   "I played a key role in steering the PULZION'23 EMS project towards success. Our aim was to elevate the annual PASC flagship event, handling 3400+ registrations and 40000+ requests. The project embraced a monolithic architecture, featuring vital microservices like mailing, notification, MCQ platform, and an Online Judge. Notably, we optimized daily operations by deploying Linux VMs on Microsoft Azure, ensuring seamless cloud-based functionality.";
 const roles = [
