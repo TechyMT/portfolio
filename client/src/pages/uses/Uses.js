@@ -62,6 +62,10 @@ export const Uses = () =>
                   <div>TypeScript</div>
                 </div>
                 <div className={styles.stackGrid}>
+                  <Icon icon={"golang"} />
+                  <div>Go</div>
+                </div>
+                <div className={styles.stackGrid}>
                   <Icon icon={"html"} />
                   <div>HTML</div>
                 </div>
@@ -157,6 +161,7 @@ export const Uses = () =>
                   <Icon icon={"figmaLarge"} />
                   <div>Figma</div>
                 </div>
+                
               </ProjectStack>
             </ProjectTextRow>
           </ProjectSectionContent>
