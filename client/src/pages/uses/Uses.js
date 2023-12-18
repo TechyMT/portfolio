@@ -144,7 +144,7 @@ export const Uses = () =>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
               <ProjectSectionHeading>Design</ProjectSectionHeading>
-              <ProjectStack as="div">
+              <ProjectStack>
                 <div className={styles.stackGrid}>
                   <Icon icon={"photoshop"} />
                   <div>Photoshop</div>
@@ -161,7 +161,6 @@ export const Uses = () =>
                   <Icon icon={"figmaLarge"} />
                   <div>Figma</div>
                 </div>
-                
               </ProjectStack>
             </ProjectTextRow>
           </ProjectSectionContent>
