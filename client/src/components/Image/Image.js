@@ -18,14 +18,16 @@ export const Image = ({
   srcSet,
   placeholder,
   ...rest
-}) => {
+}) =>
+{
   const [loaded, setLoaded] = useState(false);
   const { themeId } = useTheme();
   const containerRef = useRef();
   const src = baseSrc || srcSet?.[0];
   const inViewport = useInViewport(containerRef, !getIsVideo(src));
 
-  const onLoad = useCallback(() => {
+  const onLoad = useCallback(() =>
+  {
     setLoaded(true);
   }, []);
 
@@ -69,7 +71,8 @@ const ImageElements = ({
   sizes,
   noPauseButton,
   ...rest
-}) => {
+}) =>
+{
   const reduceMotion = useReducedMotion();
   const [showPlaceholder, setShowPlaceholder] = useState(true);
   const [playing, setPlaying] = useState(!reduceMotion);
@@ -82,58 +85,72 @@ const ImageElements = ({
   const srcSetString = srcSetToString(srcSet);
   const hasMounted = useHasMounted();
 
-  useEffect(() => {
-    const resolveVideoSrc = async () => {
+  useEffect(() =>
+  {
+    const resolveVideoSrc = async () =>
+    {
       const resolvedVideoSrc = await resolveSrcFromSrcSet({ srcSet, sizes });
       setVideoSrc(resolvedVideoSrc);
     };
 
-    if (isVideo && srcSet) {
+    if (isVideo && srcSet)
+    {
       resolveVideoSrc();
-    } else if (isVideo) {
+    } else if (isVideo)
+    {
       setVideoSrc(src.src);
     }
   }, [isVideo, sizes, src, srcSet]);
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     if (!videoRef.current || !videoSrc) return;
 
-    const playVideo = () => {
+    const playVideo = () =>
+    {
       setPlaying(true);
       videoRef.current.play();
     };
 
-    const pauseVideo = () => {
+    const pauseVideo = () =>
+    {
       setPlaying(false);
       videoRef.current.pause();
     };
 
-    if (!play) {
+    if (!play)
+    {
       pauseVideo();
 
-      if (restartOnPause) {
+      if (restartOnPause)
+      {
         videoRef.current.currentTime = 0;
       }
     }
 
     if (videoInteracted) return;
 
-    if (!inViewport) {
+    if (!inViewport)
+    {
       pauseVideo();
-    } else if (inViewport && !reduceMotion && play) {
+    } else if (inViewport && !reduceMotion && play)
+    {
       playVideo();
     }
   }, [inViewport, play, reduceMotion, restartOnPause, videoInteracted, videoSrc]);
 
-  const togglePlaying = event => {
+  const togglePlaying = event =>
+  {
     event.preventDefault();
 
     setVideoInteracted(true);
 
-    if (videoRef.current.paused) {
+    if (videoRef.current.paused)
+    {
       setPlaying(true);
       videoRef.current.play();
-    } else {
+    } else
+    {
       setPlaying(false);
       videoRef.current.pause();
     }
@@ -183,6 +200,7 @@ const ImageElements = ({
           alt={alt}
           sizes={sizes}
           {...rest}
+        
         />
       )}
       {showPlaceholder && (
@@ -205,6 +223,7 @@ const ImageElements = ({
   );
 };
 
-function getIsVideo(src) {
+function getIsVideo(src)
+{
   return typeof src.src === 'string' && src.src.endsWith('.mp4');
 }

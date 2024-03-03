@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 100%;
   isolation: isolate;
+  object-fit: cover;
 
   &[data-raised='true'] {
     box-shadow: 0 50px 100px -20px rgb(var(--rgbBlack) / 0.25),
@@ -89,6 +90,7 @@
   opacity: 0;
   grid-column: 1;
   grid-row: 1;
+  object-fit: fill;
   /* stylelint-disable-next-line value-no-vendor-prefix */
   image-rendering: -webkit-optimize-contrast;
 
