@@ -68,7 +68,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="https://drive.google.com/file/d/1khmPo62TkFPQWHKrtcRkzn03cWPbUbDW/view?usp=sharing"
+                href="https://drive.google.com/file/d/1i9f_dfrcRdeefZz99-TLv_Nj3IIUHLNm/view?usp=sharing"
                 icon="download"
               >
                 Download My Resume
