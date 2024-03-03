@@ -1,9 +1,9 @@
-import blogsBackgroundLarge from 'assets/bg.png';
-import blogsBackgroundPlaceholder from 'assets/bg.png';
-import blogsBackground from 'assets/bg.png';
-import blogsLarge from 'assets/main.png';
-import blogsMainLargePlaceholder from 'assets/main.png';
-import blogsMain from 'assets/main.png';
+import blogsBackgroundLarge from 'assets/bg-notesync.png';
+import blogsBackgroundPlaceholder from 'assets/bg-notesync.png';
+import blogsBackground from 'assets/bg-notesync.png';
+import blogsLarge from 'assets/main-Notesync.png';
+import blogsMainLargePlaceholder from 'assets/main-Notesync.png';
+import noteSyncMain from 'assets/main-Notesync.png';
 
 // import { Button } from 'components/Button';
 import { Footer } from 'components/Footer';
@@ -20,7 +20,7 @@ import
 
   ProjectSectionContent,
   ProjectSectionHeading,
-  
+
   ProjectStack,
   ProjectTextRow,
 } from 'layouts/Project';
@@ -29,12 +29,12 @@ import { Fragment } from 'react';
 import { media } from 'utils/style';
 // import styles from './blogs.module.css';
 
-const title = 'TEDxPICT Blogs Website';
+const title = 'NoteSync';
 const description =
-  "The project focused on creating an impactful online presence by incorporating a visually stunning and fully responsive layout optimized for mobile screens. As a leader, I steered a proficient development team through the entire project lifecycle, ensuring successful completion. To enhance data management, we implemented the Atlas MongoDB cloud database, centralizing and streamlining storage for efficient operations. The project's success was evident in the live website, which consistently handled over 200+ requests per day, underscoring its significance and positive reception in the online space.";
-const roles = ['Backend Development', 'Frontend Development', 'UI/UX'];
+  "NoteSync is a real-time collaborative note-taking app with a Notion-like editor, supporting up to 100 concurrent users. Powered by Yjs for efficient synchronization and Blocknote with TipTap/ProseMirror for a rich text experience, it ensures seamless collaboration. Session management is handled by PartyKit, and OAuth guarantees secure access. Zustand enhances responsiveness, and the Agile-driven team prioritizes continuous improvement for user satisfaction.";
+const roles = ['Real-Time Collaboration', 'WYSIWYG Editor', 'UI/UX'];
 
-export function Blogs()
+export function Notesync()
 {
   return (
     <Fragment>
@@ -43,8 +43,8 @@ export function Blogs()
         dangerouslySetInnerHTML={{
           __html: `
             [data-theme='dark'] {
-              --rgbPrimary: 255 000 000;
-              --rgbAccent: 255 000 000;
+              --rgbPrimary: 96 165 250;
+              --rgbAccent: 96 165 250;
             }
             [data-theme='light'] {
               --rgbPrimary: 134 99 23;
@@ -63,13 +63,13 @@ export function Blogs()
           title={title}
           description={description}
           linkLabel="Visit the website"
-          url="https://blogs.tedxpict.in/"
+          url="https://notesync-app.vercel.app/"
           roles={roles}
         />
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={[blogsMain, blogsLarge]}
+              srcSet={[noteSyncMain, blogsLarge]}
               placeholder={blogsMainLargePlaceholder}
               alt="A dark elf wearing the Volkihar Knight armor with the logo overlaid on the image."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
@@ -87,6 +87,7 @@ export function Blogs()
               <Icon icon={"mongodb"} />
               <Icon icon={"tailwind"} />
               <Icon icon={"reactjs"} />
+              {/* <Icon icon={'zustand'} /> */}
             </ProjectStack>
 
           </ProjectTextRow>

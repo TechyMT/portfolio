@@ -46,6 +46,7 @@ import Linkedin from './svg/linkedin.svg';
 import Instagram from './svg/instagram.svg';
 import Mail from './svg/mail.svg';
 import Golang from './svg/golang.svg';
+import Zustand from './svg/zustand.svg';
 export const icons = {
   arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
@@ -92,6 +93,7 @@ export const icons = {
   instagram: Instagram,
   mail: Mail,
   golang: Golang,
+  zustand: Zustand
 };
 
 export const Icon = ({ icon, className, ...rest }) =>

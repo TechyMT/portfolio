@@ -1,7 +1,7 @@
 
-import blogsTexture from 'assets/main.png';
-import blogsTextureLarge from 'assets/main.png';
-import blogsTexturePlaceholder from 'assets/main.png';
+import noteSyncTexture from 'assets/main-Notesync.png';
+import noteSyncTextureLarge from 'assets/main-Notesync.png';
+import noteSyncTexturePlaceholder from 'assets/main-Notesync.png';
 
 import pulzionTextureLarge from 'assets/pulzion.png';
 import pulzionTexturePlaceholder from 'assets/pulzion.png';
@@ -118,17 +118,17 @@ export const Home = () =>
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="TEDxPICT Blogs Website"
-        description="Led a team in crafting a visually appealing, mobile-responsive site using Atlas MongoDB for efficient data storage. The live website's success is evident with over 200 daily requests, highlighting its impactful online presence."
+        title="NoteSync"
+        description="NoteSync combines a Notion-like editor and real-time collaboration for up to 100 users, using Yjs, Blocknote, and secure OAuth access. It offers seamless editing, efficient session management with PartyKit, and responsive design through Zustand, prioritizing user experience and security."
         buttonText="View project"
-        buttonLink="/projects/tedx-blogs"
+        buttonLink="/projects/notesync"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: [blogsTexture, blogsTextureLarge],
-              placeholder: blogsTexturePlaceholder,
+              srcSet: [noteSyncTexture, noteSyncTextureLarge],
+              placeholder: noteSyncTexturePlaceholder,
             },
           ],
         }}
