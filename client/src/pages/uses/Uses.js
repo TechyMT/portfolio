@@ -81,10 +81,7 @@ export const Uses = () =>
                   <Icon icon={"nextjs"} />
                   <div>NextJs</div>
                 </div>
-              //  <div className={styles.stackGrid}>
-              //    <Icon icon={"zustand"} />
-                 // <div>Zustand</div>
-                </div>
+            
                 <div className={styles.stackGrid}>
                   <Icon icon={"express"} />
                   <div>ExpressJs</div>
