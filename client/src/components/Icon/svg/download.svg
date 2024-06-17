@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-<path d="M0 0 C1.32 0 2.64 0 4 0 C4 3.3 4 6.6 4 10 C5.32 10.33 6.64 10.66 8 11 C6.35 13.31 4.7 15.62 3 18 C-1.39158329 16.5361389 -1.87947433 14.02168662 -4 10 C-2.68 10 -1.36 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#00E5FF" transform="translate(10,0)"/>
-<path d="M0 0 C7.92 0 15.84 0 24 0 C24 0.66 24 1.32 24 2 C16.08 2 8.16 2 0 2 C0 1.34 0 0.68 0 0 Z " fill="#00E5FF" transform="translate(0,22)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" version="1.1"><path fill="#00E5FF" d="M0 0 C1.32 0 2.64 0 4 0 C4 3.3 4 6.6 4 10 C5.32 10.33 6.64 10.66 8 11 C6.35 13.31 4.7 15.62 3 18 C-1.39158329 16.5361389 -1.87947433 14.02168662 -4 10 C-2.68 10 -1.36 10 0 10 C0 6.7 0 3.4 0 0 Z" transform="translate(10,0)"/><path fill="#00E5FF" d="M0 0 C7.92 0 15.84 0 24 0 C24 0.66 24 1.32 24 2 C16.08 2 8.16 2 0 2 C0 1.34 0 0.68 0 0 Z" transform="translate(0,22)"/></svg>
