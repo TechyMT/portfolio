@@ -81,6 +81,8 @@ export const Vebus = () =>
               <Icon icon={"tailwind"} />
               <Icon icon={"reactjs"} />
               <Icon icon={"supabase"} />
+              <Icon icon={"redis"} />
+              <Icon icon = {"azure"} />
             </ProjectStack>
           </ProjectTextRow>
         </ProjectSection>

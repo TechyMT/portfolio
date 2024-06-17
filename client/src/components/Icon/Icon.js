@@ -48,6 +48,7 @@ import Mail from './svg/mail.svg';
 import Golang from './svg/golang.svg';
 import Zustand from './svg/zustand.svg';
 import Supabase from './svg/supabase.svg';
+import Redis from "./svg/redis.svg";
 export const icons = {
   arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
@@ -96,6 +97,7 @@ export const icons = {
   golang: Golang,
   zustand: Zustand,
   supabase: Supabase,
+  redis: Redis
 };
 
 export const Icon = ({ icon, className, ...rest }) =>
