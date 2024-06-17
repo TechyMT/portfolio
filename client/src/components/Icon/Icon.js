@@ -47,6 +47,7 @@ import Instagram from './svg/instagram.svg';
 import Mail from './svg/mail.svg';
 import Golang from './svg/golang.svg';
 import Zustand from './svg/zustand.svg';
+import Supabase from './svg/supabase.svg';
 export const icons = {
   arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
@@ -93,7 +94,8 @@ export const icons = {
   instagram: Instagram,
   mail: Mail,
   golang: Golang,
-  zustand: Zustand
+  zustand: Zustand,
+  supabase: Supabase,
 };
 
 export const Icon = ({ icon, className, ...rest }) =>

@@ -7,9 +7,9 @@ import pulzionTextureLarge from 'assets/pulzion.png';
 import pulzionTexturePlaceholder from 'assets/pulzion.png';
 import pulzionTexture from 'assets/pulzion.png';
 
-import billTexture from 'assets/billparser.png';
-import billTextureLarge from 'assets/billparser.png';
-import billTexturePlaceHolder from 'assets/billparser.png';
+import vebusTexture from 'assets/vebus.png';
+import vebusTextureLarge from 'assets/vebus.png';
+import vebusTexturePlaceholder from 'assets/vebus.png';
 
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
@@ -139,17 +139,17 @@ export const Home = () =>
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Receipt Parser"
-        description="Implemented a bill scanning feature using OCR for accurate text extraction, enhanced by a Language Model. Stored structured data in PostgreSQL via Nest.js backend with TypeScript for scalability."
+        title="VeBUS"
+        description="VeBUS (Very Effective Business Utility Suite) is an AI-powered productivity suite featuring tools for chatting with PDFs, dynamic note-taking, and automated meeting transcriptions."
         buttonText="View project"
-        buttonLink="/projects/receipt-parser"
+        buttonLink="/projects/vebus"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [billTexture, billTextureLarge],
-              placeholder: billTexturePlaceHolder,
+              srcSet: [vebusTexture, vebusTextureLarge],
+              placeholder: vebusTexturePlaceholder,
             },
           ],
         }}
