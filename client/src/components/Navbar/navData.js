@@ -4,11 +4,11 @@ export const navLinks = [
     pathname: '/#project-1',
   },
   {
-    label: 'Details',
+    label: 'About',
     pathname: '/#details',
   },
   {
-    label: "Stack",
+    label: "My Stack",
     pathname: '/uses'
   },
   {

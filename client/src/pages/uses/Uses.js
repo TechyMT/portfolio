@@ -81,7 +81,7 @@ export const Uses = () =>
                   <Icon icon={"nextjs"} />
                   <div>NextJs</div>
                 </div>
-            
+
                 <div className={styles.stackGrid}>
                   <Icon icon={"express"} />
                   <div>ExpressJs</div>
@@ -93,6 +93,10 @@ export const Uses = () =>
                 <div className={styles.stackGrid}>
                   <Icon icon={"postgresql"} />
                   <div>PostgreSQL</div>
+                </div>
+                <div className={styles.stackGrid}>
+                  <Icon icon={"redis"} />
+                  <div>Redis</div>
                 </div>
                 <div className={styles.stackGrid}>
                   <Icon icon={"mysql"} />
