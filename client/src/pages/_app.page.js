@@ -19,7 +19,7 @@ export const AppContext = createContext({});
 
 const repoPrompt = `
 __  __  __
-\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215
+\u0020\u0020\u0020\u005F\u005F\u0020\u0020\u005F\u005F\u005F\n\u0020\u0020\u002F\u0020\u0020\u007C\u002F\u0020\u0020\u002F\n\u0020\u002F\u0020\u002F\u007C\u005F\u002F\u0020\u002F\u0020\n\u002F\u005F\u002F\u0020\u0020\u002F\u005F\u002F\u0020
 \n\nTaking a peek huh? Check out the source code: https://github.com/TechyMT/portfolio
 `;
 
