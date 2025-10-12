@@ -2,6 +2,7 @@ import {
   vitePlugin as remix,
   cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
 } from '@remix-run/dev';
+import { netlifyPlugin } from '@netlify/remix-adapter/plugin';
 import { defineConfig } from 'vite';
 import jsconfigPaths from 'vite-jsconfig-paths';
 import mdx from '@mdx-js/rollup';
@@ -33,6 +34,7 @@ export default defineConfig({
         });
       },
     }),
+    netlifyPlugin(),
     jsconfigPaths(),
   ],
 });
