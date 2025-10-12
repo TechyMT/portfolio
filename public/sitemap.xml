@@ -1,0 +1,31 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>undefined/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>undefined/contact/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>undefined/uses/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>undefined/projects/allprojects/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>undefined/projects/pulzion/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>undefined/projects/notesync/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>undefined/projects/vebus/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
