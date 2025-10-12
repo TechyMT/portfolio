@@ -22,8 +22,8 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Mustafa, currently I live in Pune, final year undergraduate at PICT Pune (B.E
-      Computer Engineering). My projects include Frontend Development, Backend
+      I’m Mustafa, currently I live in Pune, SWE-I at <Link href="https://www.atlan.com">atlan</Link>. Completed my Bachelors in Computer Engineering (B.E
+      Computer Engineering) from PICT Pune. My projects include Frontend Development, Backend
       Development. Being a design enthusiast it allows me to design appealing websites and
       applications. I love to prototype and validate experiences. If you’re interested in
       the tools and software I use check out my <Link href="/uses">uses page</Link>.
