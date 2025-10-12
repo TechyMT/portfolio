@@ -47,10 +47,6 @@ export const links = () => [
 ];
 
 export const loader = async ({ request, context }) => {
-  if (typeof window !== 'undefined') {
-    const hydratedPathname = window.location.pathname;
-    window.__remixContext.url = hydratedPathname;
-  }
   const { url } = request;
   const { pathname } = new URL(url);
   const pathnameSliced = pathname.endsWith('/') ? pathname.slice(0, -1) : url;
