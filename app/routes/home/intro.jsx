@@ -12,6 +12,7 @@ import { cssProps } from '~/utils/style';
 import config from '~/config.json';
 import { useHydrated } from '~/hooks/useHydrated';
 import styles from './intro.module.css';
+import Particles from '~/components/faulty-terminal/faulty-terminal';
 
 const DisplacementSphere = lazy(() =>
   import('./displacement-sphere').then(module => ({ default: module.DisplacementSphere }))
@@ -65,7 +66,24 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
           <>
             {isHydrated && (
               <Suspense>
-                <DisplacementSphere />
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100vh',
+                    position: 'absolute',
+                  }}
+                >
+                  <Particles
+                    particleColors={['#00eeff', '#6033d8', '#ff0000']}
+                    particleCount={600}
+                    particleSpread={10}
+                    speed={0.1}
+                    particleBaseSize={200}
+                    moveParticlesOnHover={true}
+                    alphaParticles={true}
+                    disableRotation={false}
+                  />
+                </div>
               </Suspense>
             )}
             <header className={styles.text}>
