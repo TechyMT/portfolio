@@ -1,6 +1,5 @@
 import {
   vitePlugin as remix,
-  cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
 } from '@remix-run/dev';
 import { netlifyPlugin } from '@netlify/remix-adapter/plugin';
 import { defineConfig } from 'vite';
@@ -26,7 +25,6 @@ export default defineConfig({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
       providerImportSource: '@mdx-js/react',
     }),
-    remixCloudflareDevProxy(),
     remix({
       routes(defineRoutes) {
         return defineRoutes(route => {
